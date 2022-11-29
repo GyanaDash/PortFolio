@@ -9,21 +9,28 @@
             background: rgb(2,0,36);
             background: linear-gradient(49deg, rgba(2,0,36,1) 0%, rgba(9,121,105,0.434908997778799) 35%, rgba(0,212,255,1) 100%);
         }
+        img
+        {
+            width: 200px;
+        }
+
+        .img-thumbnail
+        {
+            height:20rem;
+        }
     </style>
 
-    <div class="container my-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-4 mx-auto">
+            <div class="col-md-4 py-4">
                 <div class="card mx-auto shadow-lg p-2 mb-5 bg-white rounded">
-                    <div class="card-body" style="background-color:#b8e994">
+                    <div class="card-body" style="background-color:lightslategrey">
                         <center>
-                        <img src="~/Images/ProfilePic.jpg" class="img-fluid rounded-circle" width="200px" />
-                            <h2 class="py-1" style="font-family:Papyrus, TeX Gyre Schola, serif"><strong>Gyan Dash</strong></h2>
+                            <img src="~/Images/Profile.jpg" class="img-fluid img-thumbnail"/>
+                            <h2 class="py-3" style="font-family:Papyrus, TeX Gyre Schola, serif"><strong>Gyan Dash</strong></h2>
                         <hr />
-                            <p><strong>WEB DEVELOPER</strong></p>
-                            </center>
+                            <h6 class="text-white"><strong>WEB DEVELOPER</strong></h6>
+                        </center>
                     </div>
                     <div class="card-footer " style="background-color:white">
                         <center>
@@ -36,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 ">
+            <div class="col-md-6 mx-auto">
                 <h1 class="py-1" style="font-size: 100px;"><big><b>Hello</b></big></h1>
                 <p class="py-1" style="font-size: 25px;">Here's who I am & what I do</p>
                 <div class="d-grid gap-2  d-md-block">
@@ -55,7 +62,6 @@
                     Looking to start the career as an entry-level software engineer <br />
                     with a reputed firm driven by technology.</p>
             </div>
-
         </div>
     </div>
 </div>
