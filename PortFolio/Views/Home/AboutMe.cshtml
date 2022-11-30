@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewData["Title"] = "AboutMe";
+}
+<style>
+
+    #about
+    {
+        padding:26px 0;
+        color:rebeccapurple;
+    }
+    .row
+    {
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
+   /* .about-col-1
+    {
+        flex-basis: 35%;
+    }
+    .about-col-1 img
+    {
+        width:100%;
+        border-radius:15px;
+    }
+    */
+    .about-col-2 {
+        flex-basis: 75%;
+    }
+
+    .sub-title
+    {
+        font-size:60px;
+        font-weight:600;
+        color:black;
+    }
+
+    .tab-titles
+    {
+        display:flex;
+        margin: 20px 0 40px;
+    }
+    .tab-links
+    {
+        margin-right:50px;
+        font-size:18px;
+        font-weight:500;
+        cursor:pointer;
+        position:relative;
+    }
+
+    .tab-links::after
+    {
+        content:'';
+        width:0;
+        height:3px;
+        background:red;
+        position:absolute;
+        left:0;
+        bottom:-8px;
+        transition:0.5s;
+    }
+    .tab-links.active-links::after
+    {
+        width:100%;
+    }
+
+    .tab-contents ul li
+    {
+        list-style:none;
+        margin:10px 0;
+    }
+
+    .tab-contents ul li span
+    {
+        color:black;
+        font-size:18px;
+        font-weight:700;
+    }
+    .tab-contents
+    {
+        display:none;
+    }
+      .tab-contents.active-tab
+        {
+            display:block;
+        }
+</style>
+<div id="about">
+    <div class="container">
+        <div class="row">
+        @*    <div class="about-col-1 card py-3">
+                <img src="~/Images/Profile.jpg" class="card-img"/>
+            </div>*@
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like</p>
+            </div>
+            <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Worked on multiple projects which includes HTML, CSS, Bootstrap anf Frontend frameworks like Angular 9</li>
+                    <li><span>.Net Core</span><br>Well versed with .net environments, SQL Server, SSIS Etl tool</li>
+                    <li><span>Microservice</span><br>Working experence on Microservice architecture</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>MapSystem</span><br>Worked as an UI/UX Developer</li>
+                    <li><span>Capgemini</span><br>Worked for Capgemini around 2.6 years as a Dot Net Developer</li>
+                    <li><span>UnitedHealth Group</span><br>Currently working as an Associate Software Engineer for UnitedHealth Group</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>BE/B.Tech</span><br>Graduated on 2018 with 7.2 CGPA</li>
+                    <li><span>Diploma</span><br>Completed two years of Diploma Engineering from Electrical Branch</li>
+                    <li><span>BSE</span><br>Completed my schooling on year 2009 from BSE, Odisha</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
