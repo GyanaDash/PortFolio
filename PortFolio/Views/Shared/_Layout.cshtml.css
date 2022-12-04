@@ -48,3 +48,7 @@ button.accept-policy {
   text-align:center;
   background-color:floralwhite;
 }
+.nav-item {
+    color: red;
+    font:900;
+}
